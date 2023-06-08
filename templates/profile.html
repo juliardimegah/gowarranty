@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Welcome, {{.Username}}!</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/warranty">Data Garansi</a></li>
+            <li><a href="/profile">Profile</a></li>
+        </ul>
+    </nav>
+    <h2>Profile</h2>
+    <form action="/profile" method="POST">
+        <label for="name">Nama:</label>
+        <input type="text" name="name" id="name" value="{{.User.Name}}" required><br>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" value="{{.User.Username}}" required><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="{{.User.Email}}" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

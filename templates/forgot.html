@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lupa Password</title>
+</head>
+<body>
+    <h1>Lupa Password</h1>
+    {{if .}}
+    <p>{{.}}</p>
+    {{end}}
+    <form action="/forgot" method="POST">
+        <label for="username_or_email">Username atau Email:</label>
+        <input type="text" name="username_or_email" id="username_or_email" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
